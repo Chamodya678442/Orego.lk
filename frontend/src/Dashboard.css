@@ -1,0 +1,518 @@
+
+.dashboard 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+	color: #222;
+	background: #f7f9fc;
+	padding: 24px;
+}
+
+.dashboard h1 
+{
+	font-size: 2rem;
+	margin-bottom: 12px;
+	color: #0b3d91;
+}
+
+.dashboard .state 
+{
+	background: white;
+	border-radius: 8px;
+	padding: 16px 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+	min-width: 320px;
+	text-align: center;
+}
+
+.admin-panel 
+{ 
+    padding: 24px; 
+}
+.admin-header 
+{ display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:16px; margin-bottom: 16px 
+}
+.admin-header h1 
+{ 
+  margin: 0;
+
+}
+.admin-nav 
+{ 
+    display:flex;
+    gap:8px 
+}
+.admin-nav button 
+{ background: transparent; 
+  border: 1px solid #d1d5db;
+  padding: 6px 10px; 
+  border-radius: 6px; 
+  cursor: pointer 
+}
+.admin-nav button.active 
+{ 
+    background: #1e40af; 
+    color: white; 
+    border-color: #1e40af 
+}
+
+.admin-body 
+{ 
+    display:flex; 
+    gap:16px; 
+    flex-direction: column 
+}
+.admin-card 
+{ 
+    background: white; 
+    border-radius: 10px; 
+    padding: 16px; 
+    box-shadow: 0 6px 18px rgba(15,23,42,0.06) 
+}
+.admin-form 
+{ 
+    display:flex; 
+    flex-direction:column; 
+    gap:10px; 
+    margin-bottom:12px 
+}
+.field-row 
+{ 
+    display:flex; 
+    gap:8px 
+}
+.field-row input, .field-row select 
+{ 
+    flex:1; 
+    padding:8px 10px; 
+    border:1px solid #e6e9ef; 
+    border-radius:6px 
+}
+.actions 
+{ 
+    display:flex; 
+    justify-content:flex-end 
+}
+.list 
+{ 
+    margin-top:12px 
+}
+.card 
+{ 
+    background:#fafafa; 
+    padding:8px 12px; 
+    border-radius:6px; 
+    margin-bottom:8px 
+}
+.card.small 
+{ 
+    padding:6px 8px; 
+    font-size:0.95rem 
+}
+.card-with-action 
+{ 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap:8px 
+}
+.delete-btn 
+{ 
+    background:#ef4444; 
+    color:white; 
+    border:none; 
+    padding:4px 8px; 
+    border-radius:4px; 
+    cursor:pointer; 
+    font-size:0.9rem; 
+}
+.delete-btn:hover 
+{ 
+    background:#dc2626 
+}
+.muted 
+{ 
+    color:#6b7280; 
+    font-size:0.9rem 
+}
+.empty 
+{ 
+    color:#9ca3af 
+}
+.list-grid 
+{ 
+    display:grid; 
+    grid-template-columns:repeat(3,1fr); 
+    gap:12px 
+}
+
+@media (max-width:800px)
+{
+	.list-grid { grid-template-columns:1fr }
+	.field-row { flex-direction:column }
+}
+
+
+.patient-panel 
+{ 
+    padding: 24px; 
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); 
+    min-height: 100vh 
+}
+.patient-header 
+{ 
+    margin-bottom: 24px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 16px 
+}
+.patient-header h1 
+{ 
+    margin: 0; 
+    color: #0b3d91 
+}
+.patient-info 
+{ 
+    color: #475569; 
+    font-size: 1rem 
+}
+
+.patient-body 
+{ 
+    display: flex; 
+    flex-direction: 
+    column; gap: 20px; 
+    max-width: 1000px; 
+    margin: 0 auto 
+}
+.patient-card 
+{ 
+    background: white; 
+    border-radius: 12px; 
+    padding: 20px; 
+    box-shadow: 0 6px 18px rgba(15,23,42,0.08) 
+}
+.patient-card h2 
+{ 
+    margin: 0 0 16px 0; 
+    color: #0b3d91; 
+    font-size: 1.4rem 
+}
+
+.allocation-grid 
+{ 
+    display: grid; 
+    grid-template-columns: 
+    repeat(3, 1fr); 
+    gap: 16px 
+}
+.allocation-item 
+{ 
+    background: #f0f9ff; 
+    border-left: 4px solid #0b3d91; 
+    padding: 12px; 
+    border-radius: 6px 
+}
+.allocation-item .label 
+{ 
+    color: #6b7280; 
+    font-size: 0.85rem; 
+    margin-bottom: 4px 
+}
+.allocation-item .value 
+{ 
+    color: #0b3d91; 
+    font-weight: 600; 
+    font-size: 1rem 
+}
+
+.schedules-list 
+{ 
+    display: flex; 
+    flex-direction: 
+    column; 
+    gap: 12px 
+}
+.schedule-item 
+{ 
+    display: flex; 
+    gap: 16px; 
+    padding: 12px; 
+    background: #fafafa; 
+    border-radius: 8px; 
+    align-items: center 
+}
+.schedule-date 
+{ 
+    background: #0b3d91; 
+    color: white; 
+    padding: 8px 12px; 
+    border-radius: 6px; 
+    font-weight: 600; 
+    min-width: 100px; 
+    text-align: center; 
+    font-size: 0.9rem 
+}
+.schedule-details 
+{ 
+    flex: 1 
+}
+.schedule-type 
+{ 
+    color: #0b3d91; 
+    margin-bottom: 4px 
+}
+.schedule-meta 
+{ 
+    color: #6b7280; 
+    font-size: 0.9rem 
+}
+.schedule-status 
+{ 
+    padding: 4px 10px; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    font-weight: 600 
+}
+.schedule-status.confirmed 
+{ 
+    background: #d1fae5; 
+    color: #065f46 
+}
+.schedule-status.scheduled 
+{ 
+    background: #fef3c7; 
+    color: #92400e 
+}
+.empty-state 
+{ 
+    color: #9ca3af; 
+    text-align: center;
+    padding: 32px 
+}
+
+@media (max-width:800px)
+{
+	.allocation-grid 
+    { 
+        grid-template-columns: 1fr 
+    }
+	.schedule-item 
+    { 
+        flex-direction: column; 
+        align-items: flex-start 
+    }
+	.schedule-date 
+    { 
+        width: 100% 
+    }
+}
+
+/*
+.doctor-panel 
+{ 
+    padding: 24px; 
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); 
+    min-height: 100vh 
+}
+.doctor-header 
+{ 
+    margin-bottom: 24px; 
+    display: flex; 
+    align-items: center; 
+    gap: 16px 
+}
+.doctor-header h1 
+{ 
+    margin: 0; 
+    color: #0b3d91; 
+    font-size: 2rem 
+}
+.doctor-info 
+{ 
+    color: #6b7280; 
+    font-size: 0.95rem; 
+    margin-top: 4px 
+}
+.doctor-name 
+{ 
+    font-weight: 600; 
+    color: #0b3d91 
+}
+.doctor-grade 
+{ 
+    color: #6b7280 
+}
+
+.doctor-body 
+{ 
+    display: flex; 
+    flex-direction: 
+    column; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto 
+}
+.doctor-card 
+{ 
+    background: white; 
+    border-radius: 12px; 
+    padding: 20px; 
+    box-shadow: 0 6px 18px rgba(15,23,42,0.08) 
+}
+.doctor-card h2 
+{ 
+    margin: 0 0 16px 0; 
+    color: #0b3d91; 
+    font-size: 1.3rem 
+}
+
+.schedules-table 
+{ 
+    overflow-x: auto 
+}
+.schedules-table table 
+{ 
+    width: 100%; border-collapse: 
+    collapse; font-size: 0.9rem 
+}
+.schedules-table th 
+{ background: #f0f9ff; 
+    color: #0b3d91; 
+    padding: 10px; 
+    text-align: left; 
+    font-weight: 600; 
+    border-bottom: 2px solid #0b3d91 
+}
+.schedules-table td 
+{ 
+    padding: 10px; 
+    border-bottom: 1px solid #e5e7eb 
+}
+.schedules-table tr:hover 
+{ 
+    background: #f9fafb 
+}
+.status-badge 
+{ 
+    padding: 4px 8px; 
+    border-radius: 12px; 
+    font-size: 0.8rem; 
+    font-weight: 600 
+}
+.status-badge.confirmed 
+{ 
+    background: #d1fae5; 
+    color: #065f46 
+}
+.status-badge.scheduled 
+{ 
+    background: #fef3c7; 
+    color: #92400e 
+}
+
+.patients-grid 
+{ 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 12px 
+}
+.patient-item 
+{ 
+    background: #f9fafb; 
+    border: 1px solid #e5e7eb; 
+    border-radius: 8px; 
+    padding: 12px 
+}
+.patient-header 
+{ 
+    margin-bottom: 8px 
+}
+.patient-name 
+{ 
+    font-weight: 600; 
+    color: #0b3d91; 
+    font-size: 1rem 
+}
+.patient-age 
+{ 
+    color: #6b7280; 
+    font-size: 0.85rem 
+}
+.patient-details 
+{ 
+    display: flex; 
+    flex-direction: column; 
+    gap: 4px 
+}
+.detail-row 
+{ 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 0.85rem 
+}
+.detail-row .label 
+{ 
+    color: #6b7280; 
+    font-weight: 500
+ }
+.detail-row .value 
+{ 
+    color: #0b3d91; 
+    font-weight: 600 
+}
+
+.wards-grid 
+{ 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 16px 
+}
+.ward-item 
+{ 
+    background: #f0f9ff; 
+    border-left: 4px solid #0b3d91; 
+    padding: 16px; 
+    border-radius: 8px
+ }
+.ward-name 
+{ 
+    font-weight: 600; 
+    color: #0b3d91; 
+    margin-bottom: 8px 
+}
+.capacity-bar 
+{ 
+    background: #e0f2fe; 
+    border-radius: 4px; 
+    height: 20px; 
+    overflow: hidden; 
+    margin-bottom: 6px 
+}
+.capacity-used 
+{ 
+    background: linear-gradient(90deg, #0b3d91, #1e40af); 
+    height: 100%; transition: width 0.3s 
+}
+.capacity-text 
+{ 
+    font-size: 0.85rem; 
+    color: #6b7280; 
+    text-align: center 
+}
+
+@media (max-width:900px) {
+	.patients-grid { grid-template-columns: 1fr }
+	.schedules-table { font-size: 0.8rem }
+	.schedules-table th, .schedules-table td { padding: 6px }
+}
+    */
+    
+

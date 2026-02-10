@@ -1,0 +1,143 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f9f9;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 420px;
+  margin: 80px auto;
+  padding: 28px 32px;
+  background-color: #ffffffee;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+.container h2 {
+  margin: 4px 0 2px 0;
+  color: #0b3d91;
+  font-size: 1.6rem;
+}
+.subtitle { color: #475569; font-size: 0.95rem; margin-bottom: 8px }
+.header{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: rgb(10, 11, 10);
+  display: flex;
+  justify-content: center;
+  top: 0px;
+  text-align: center;
+  padding: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(242, 244, 242);
+}
+.layout{
+  background-color: rgb(241, 237, 235);
+  opacity: 0.8;
+  margin: 0px 300px 0px 300px;
+  padding: 20px 20px 50px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  opacity: 1;
+}
+
+.input {
+  
+  display : flex;
+  justify-content: center;
+  width: 100%;
+  height : 35px;
+  padding: 0px 0px 0px 0px ;
+  margin: 10px ;
+  size: 16px;
+ 
+}
+.inputField {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+}
+.inputField:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.08);} 
+.input1 {
+
+  display :flex ;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+  padding: 70px 0px 0px 0px ;
+  margin: 20px ;
+
+
+  
+ 
+}
+.image {
+  
+  padding: 0px ;
+  background-size:cover;     
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  opacity: 1;    
+ 
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #eef2ff66;
+       
+}
+     
+.button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 6px 0 0 0;
+}
+
+.primary {
+  width: 100%;
+  background: linear-gradient(180deg,#1e40af,#1e3a8a);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.primary:hover { opacity: 0.95 }
+
+.help { color: #6b7280; font-size: 0.85rem; margin-top: 8px }
+
+
+

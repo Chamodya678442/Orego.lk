@@ -1,0 +1,130 @@
+
+.admin-panel 
+{ 
+    padding: 24px; 
+}
+.admin-header 
+{ display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:16px; margin-bottom: 16px 
+}
+.admin-header h1 
+{ 
+  margin: 0;
+
+}
+.admin-nav 
+{ 
+    display:flex;
+    gap:8px 
+}
+.admin-nav button 
+{ background: transparent; 
+  border: 1px solid #d1d5db;
+  padding: 6px 10px; 
+  border-radius: 6px; 
+  cursor: pointer 
+}
+.admin-nav button.active 
+{ 
+    background: #1e40af; 
+    color: white; 
+    border-color: #1e40af 
+}
+
+.admin-body 
+{ 
+    display:flex; 
+    gap:16px; 
+    flex-direction: column 
+}
+.admin-card 
+{ 
+    background: white; 
+    border-radius: 10px; 
+    padding: 16px; 
+    box-shadow: 0 6px 18px rgba(15,23,42,0.06) 
+}
+.admin-form 
+{ 
+    display:flex; 
+    flex-direction:column; 
+    gap:10px; 
+    margin-bottom:12px 
+}
+.field-row 
+{ 
+    display:flex; 
+    gap:8px 
+}
+.field-row input, .field-row select 
+{ 
+    flex:1; 
+    padding:8px 10px; 
+    border:1px solid #e6e9ef; 
+    border-radius:6px 
+}
+.actions 
+{ 
+    display:flex; 
+    justify-content:flex-end 
+}
+.list 
+{ 
+    margin-top:12px 
+}
+.card 
+{ 
+    background:#fafafa; 
+    padding:8px 12px; 
+    border-radius:6px; 
+    margin-bottom:8px 
+}
+.card.small 
+{ 
+    padding:6px 8px; 
+    font-size:0.95rem 
+}
+.card-with-action 
+{ 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap:8px 
+}
+.delete-btn 
+{ 
+    background:#ef4444; 
+    color:white; 
+    border:none; 
+    padding:4px 8px; 
+    border-radius:4px; 
+    cursor:pointer; 
+    font-size:0.9rem; 
+}
+.delete-btn:hover 
+{ 
+    background:#dc2626 
+}
+.muted 
+{ 
+    color:#6b7280; 
+    font-size:0.9rem 
+}
+.empty 
+{ 
+    color:#9ca3af 
+}
+.list-grid 
+{ 
+    display:grid; 
+    grid-template-columns:repeat(3,1fr); 
+    gap:12px 
+}
+
+@media (max-width:800px)
+{
+	.list-grid { grid-template-columns:1fr }
+	.field-row { flex-direction:column }
+}

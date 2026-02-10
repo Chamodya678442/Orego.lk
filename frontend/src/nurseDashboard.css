@@ -1,0 +1,372 @@
+.nurse-dashboard {
+  min-height: 100vh;
+  padding: 24px;
+  background: linear-gradient(135deg, #f0f9ff, #e0e7ff);
+  font-family: Arial, sans-serif;
+}
+
+.patient-search {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  font-size: 0.9rem;
+}
+
+
+/* Header */
+.nurse-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nurse-header h1 {
+  color: #0b3d91;
+  margin-bottom: 4px;
+}
+
+.nurse-header p {
+  color: #475569;
+}
+
+.nurse-header small {
+  display: block;
+  margin-top: 6px;
+  color: #475569;
+  font-weight: 500;
+}
+
+
+/* Tabs */
+.nurse-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.nurse-tabs button {
+  padding: 10px 18px;
+  border: none;
+  background: #e5e7eb;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nurse-tabs button.active,
+.nurse-tabs button:hover {
+  background: #0b3d91;
+  color: white;
+}
+
+/* Cards */
+.nurse-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Profile */
+
+.profile-header {    /*Add a profile photo*/
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-role {
+  color: #475569;
+  font-weight: 500;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  margin-top: 20px;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-item .label {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.profile-item .value {
+  font-size: 1rem;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.profile-item .value.grade {
+  color: #1e40af;
+  font-weight: 700;
+}
+
+.grade-badge {       /*Add badges to the nurse profile*/
+  margin-left: 8px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+/* Grade colors */
+.grade-badge.junior {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.grade-badge.senior {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.grade-badge.charge {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.nurse-dashboard.dark .grade-badge {
+  filter: brightness(1.1);
+}
+
+
+/* Table */
+.nurse-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+.nurse-table th {
+  background: #eef2ff;
+  color: #1e3a8a;
+  padding: 10px;
+  text-align: center;
+}
+
+.nurse-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Status badges */
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status.stable {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.observation {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.status.critical {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Schedule */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.schedule-box {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #1e3a8a;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.schedule-box span:nth-child(2) { /* second span is shift */
+  display: block;
+}
+
+.schedule-box span:nth-child(2)::before {
+  content: attr(data-shift);
+}
+
+/* Example: override background based on shift */
+.schedule-box[data-shift="Morning"] { background: #dbeafe; }
+.schedule-box[data-shift="Evening"] { background: #fde68a; }
+.schedule-box[data-shift="Night"] { background: #c7d2fe; }
+
+
+/* Tasks */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0fdf4;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.task-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.task-time {
+  font-size: 0.75rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+
+.task-list li.done {
+  text-decoration: line-through;
+  color: #64748b;
+  background: #e5e7eb;
+}
+
+.task-list input {
+  width: 16px;
+  height: 16px;
+}
+
+.patient-summary {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.summary-card {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.summary-card.stable {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.summary-card.observation {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.summary-card.critical {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.task.high { border-left: 4px solid #dc2626; }
+.task.medium { border-left: 4px solid #f59e0b; }
+.task.low { border-left: 4px solid #16a34a; }
+
+.priority {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+.task.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Task Table Styles */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.task-table th, .task-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.task-table th {
+  background: #eef2ff;
+  color: #1e3a8a;
+}
+
+.task-table tr.done td {
+  text-decoration: line-through;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* Priority Labels */
+.priority.high { 
+  color: #dc2626; 
+  font-weight: 700; 
+}
+
+
+.priority.medium { 
+  color: #f59e0b; 
+  font-weight: 700;
+}
+
+
+.priority.low { 
+  color: #16a34a; 
+  font-weight: 700; 
+}
+
+.schedule-box.today {
+  border: 2px solid #22c55e;
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+  transform: scale(1.02);
+}
+
+
+
